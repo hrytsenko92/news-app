@@ -1,0 +1,11 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.appContainer {
+    background-color: rgb(176, 172, 172);
+    max-width: 1340px;
+    margin: 0 50px;
+}
