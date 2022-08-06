@@ -1,10 +1,10 @@
 import style from './logo.module.css'
-import logoPng from './logo-2.png'
+import logoSvg from './logo-2.svg'
 
 const Logo = () => {
     return (
       < >
-        <img src={logoPng} alt="logo" className={style.logoImg} />
+        <img src={logoSvg} alt="logo" className={style.logoImg} />
       </>
     );
   }

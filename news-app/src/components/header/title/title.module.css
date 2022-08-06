@@ -1,9 +1,11 @@
 .beforeImg {
     width: 100%;
+    max-width: 150px;
     height: auto;
 }
 
 .afterImg {
     width: 100%;
+    max-width: 150px;
     height: auto;
 }
