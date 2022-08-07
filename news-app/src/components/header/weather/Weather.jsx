@@ -20,12 +20,13 @@ const Weather = () => {
 
 
     const getWeather = () => {
-      const onSuccess = (position) => {
-       let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=9a564f272063217be589d2a7938b8c8e&units=metric`
-       fetch(weatherUrl)
-        .then((resp) => {return resp.json() 
-        .then((data) => {console.log(data); return data}); });
+      let result = null;
+      const onSuccess = async (position) => {
+        let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=9a564f272063217be589d2a7938b8c8e&units=metric`
+        let res = await fetch(weatherUrl).then((resp) => {return resp.json().then((data) => {console.log(data); return data}); });
+        console.log(res);
       };
+      
       const onError = () => {
         fetch(
           `https://api.openweathermap.org/data/2.5/weather?lat=${50.449755545630815}&lon=${30.525695923164733}&appid=9a564f272063217be589d2a7938b8c8e&units=metric`
@@ -37,12 +38,11 @@ const Weather = () => {
         });
       };
       const getGeoData = () => {
-        let aaa = navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        console.log(aaa)
-        
+      navigator.geolocation.getCurrentPosition(onSuccess, onError);
       };
       getGeoData();
-      
+      console.log(result);
+      return result;
     };
     console.log ("fin     =     " + getWeather());
 
