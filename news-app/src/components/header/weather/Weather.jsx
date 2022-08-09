@@ -8,8 +8,8 @@ import { createFactory } from "react";
 
 const Weather = () => {
   const getMyWeather = async () => {
-    const weatherData = getUserWeather();
-    console.log("sqqq        " + weatherData);
+    const weatherData = await getUserWeather().then((res) => {console.log(res); return res});
+    console.log(weatherData.main);
   };
 
   useEffect(() => {
