@@ -7,9 +7,11 @@ import cloudyImg from "./cloudy.svg";
 const Weather = () => {
   const [currentTemperature, setCurrentTemperature] = useState("loading...");
   const [currentWindSpeed, setCurrentWindSpeed] = useState("loading...")
+  const [currentCity, setCurrentCity] = useState("loading...")
   const getTempAndWind = (data) => {
     setCurrentTemperature(data.main.temp)
     setCurrentWindSpeed(data.wind.speed)
+    setCurrentCity(data.name)
     return data;
   }
   const getUserWeather = async () => {
@@ -32,6 +34,7 @@ const Weather = () => {
     <div className={style.weather}>
       <div className="container">
         <div className="info">
+          <div className="city">{currentCity}</div>
           <div className="temperature">{currentTemperature}</div>
           <div className="windSpeed">{currentWindSpeed}</div>
         </div>
