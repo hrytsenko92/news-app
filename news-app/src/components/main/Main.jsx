@@ -1,26 +1,29 @@
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import style from './main.module.css'
 
-import NewsAuto from './NewsAuto';
 import General from './General';
+import Sport from './Sport';
+import Health from './Health'
+import Cars from './Cars';
+import Economics from './Economics';
+
+
 
 const Main = () => {
     return (
       <div className={style.main}>
         <Router>
-            <nav className={style.router}>
                 <li><Link to="./General">General</Link></li>
-                {/* <li><link to=""></link></li>
-                <li><link to=""></link></li>
-                <li><link to=""></link></li> */}
-                <li><Link to="./NewsAuto">Auto</Link></li>
-            </nav>
+                <li><Link to="./Sport">Sport</Link></li>
+                <li><Link to="./Health">Health</Link></li>
+                <li><Link to="./Cars">Cars</Link></li>
+                <li><Link to="./Economics">Economics</Link></li>
             <Routes>
-                <Route exact path="./General" component={General}/>
-                {/* <Route exact path="/" component={}/>
-                <Route exact path="/" component={}/>
-                <Route exact path="/" component={}/> */}
-                <Route exact path="./NewsAuto" component={NewsAuto}/>
+                <Route path="./General" component={General}/>
+                <Route path="./Sport" component={Sport}/>
+                <Route path="./Health" component={Health}/>
+                <Route path="./Cars" component={Cars}/>
+                <Route path="./Economics" component={Economics}/>
             </Routes>
         </Router>
       </div>

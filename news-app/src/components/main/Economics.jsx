@@ -2,12 +2,12 @@
 // import Main from './components/main/Main';
 // import './App.css'
 
-const NewsAuto = () => {
+const Economics= () => {
   return (
-    <div className='newsAuto'>
-        <span>auto news</span>
+    <div className='economics'>
+        <span>economics</span>
     </div>
   );
 }
 
-export default NewsAuto;
+export default Economics;
