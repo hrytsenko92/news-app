@@ -5,7 +5,7 @@ import aft from './after.svg'
 const Title = () => {
   return (
     <div className="title">
-      <h1>News In Ukraine</h1>
+      <h1>News</h1>
       <div className="dateList">
       <img src={bef} alt="before" className={style.beforeImg}/>
       <div>
