@@ -1,0 +1,12 @@
+.general {
+    background-color: rgb(179, 169, 155);
+}
+
+.test {
+    background-color: rgb(220, 124, 124);
+}
+
+.test2 {
+    background-color: rgb(91, 108, 152);
+    border: 2px solid black;
+}
