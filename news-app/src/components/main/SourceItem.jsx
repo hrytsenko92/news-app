@@ -1,19 +1,20 @@
+import { useEffect, useState } from "react";
 
 const SourceItem = (props) => {
     const {category} = props;
-    const {setUserCategory} = props;
+    const {UserCategory} = props;
     const {articleData} = props;
-    const {as} = props;
-
-    console.log(articleData);
-
-
-    setUserCategory(category)
+    const [receivedData, setReceivedData] = useState("Loading...");
+    useEffect(()=>{
+        const pushReceivedData = () => {setReceivedData(articleData)}
+        UserCategory(category)
+        pushReceivedData();
+    },[articleData])
+    console.log(receivedData);    
     return (
       <div className='sourceItem'>
-        <span>{as}</span>
+        {/* <span>{as}</span> */}
         <span>{"span:   " + category}</span>
-        {/* <div>{articleData}</div> */}
       </div>
     );
   }
