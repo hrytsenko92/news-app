@@ -3,7 +3,7 @@ import axios from "axios";
 import ArticleGrid from "./ArticleGrid";
 import Pagination from "./Pagination";
 
-const PageHealth = () => {
+const PageSport = () => {
   const [articles, setArticles] = useState([]);
   console.log(articles);
   const [loading, setLoading] = useState(false);
@@ -18,7 +18,7 @@ const PageHealth = () => {
     const getArticles = async () => {
       setLoading(true);
       const res = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&category=health&pageSize=80&apiKey=782a7379df92415ebe4dc42d9983fc99`
+        `https://newsapi.org/v2/top-headlines?country=us&category=sport&pageSize=80&apiKey=782a7379df92415ebe4dc42d9983fc99`
       );
       setArticles(res.data.articles);
       setLoading(false);
@@ -37,4 +37,4 @@ const PageHealth = () => {
   );
 };
 
-export default PageHealth;
+export default PageSport;
