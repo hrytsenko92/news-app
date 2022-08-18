@@ -2,9 +2,6 @@ const Pagination = (props) => {
   const { articlePage } = props;
   const { totalArticles } = props;
   const { paginate } = props;
-  const { prevPage } = props;
-  const { nextPage } = props;
-
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalArticles / articlePage); i++) {
@@ -21,8 +18,6 @@ const Pagination = (props) => {
           </li>
         ))}
       </ul>
-      <button className="pagePrev" onClick={prevPage}></button>
-      <button className="pageNext" onClick={nextPage}></button>
     </div>
   );
 };

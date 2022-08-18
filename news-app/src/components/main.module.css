@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800|Playfair+Display:400i,900');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --logo-bg: #E91E63;
+  --logo-bg-hover: #c91451;
+  --logo-text: #fff;
+  --site-bg: #eee;
+  --artcl-clr: #555;
+  --text-clr: black;  
+}
+
+.main {
+  background-color: burlywood; 
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.header {
+    background-color: cadetblue;
+    padding: 0 70px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.headerWrapper {
+  display: grid;
+  grid-template-columns: 150px 3fr 2.5fr 1fr;
+  grid-template-rows: 60px;
+}
+
+
+.logoItem {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    height: 80px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--logo-bg);
+    color: var(--logo-text);
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 400;
+}
+.logoItem:hover {
+    background-color: var(--logo-bg-hover);
+}
+
+.routerNav {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    list-style: none;
+}
+.routerNavItem {
+    background-color: aqua;
+    width: 95px;
+    height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.weatherAndDate {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+
+
+
+img {
+  width: 450px;
+  height: 250px;
+}

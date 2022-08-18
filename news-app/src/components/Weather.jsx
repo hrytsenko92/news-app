@@ -1,8 +1,4 @@
-import { useEffect, useState, useMemo } from "react";
-import style from "./weather.module.css";
-import sunImg from "./sun.svg";
-import rainImg from "./rain.svg";
-import cloudyImg from "./cloudy.svg";
+import { useEffect, useState } from "react";
 
 const Weather = () => {
   const [currentTemperature, setCurrentTemperature] = useState("loading...");
@@ -19,7 +15,7 @@ const Weather = () => {
       let userCoords = await new Promise(function (resolve, reject) {return navigator.geolocation.getCurrentPosition(resolve, reject)});
       let response = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${userCoords.coords.latitude}&lon=${userCoords.coords.longitude}&appid=9a564f272063217be589d2a7938b8c8e&units=metric`)
         .then((resp) => {return resp.json()})
-        .then((resp) => {getTempAndWind(resp) }) /// console.log(resp); 
+        .then((resp) => {getTempAndWind(resp) }) 
       return response; 
     } catch (error) {
       console.error("Problem in:", error.message);
@@ -29,16 +25,15 @@ const Weather = () => {
   useEffect(() => {
     getUserWeather();
   }, []);
-
+// className={style.weather} down
   return (
-    <div className={style.weather}>
+    <div > 
       <div className="container">
         <div className="info">
           <div className="city">{currentCity}</div>
           <div className="temperature">{currentTemperature}</div>
           <div className="windSpeed">{currentWindSpeed}</div>
         </div>
-        <img src="" alt="weatherImg" className="weatherImg" />
       </div>
     </div>
   );
