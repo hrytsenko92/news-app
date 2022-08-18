@@ -24,21 +24,21 @@ const Main = () => {
             </div>
             <ul className={style.routerNav}>
               <li className={style.routerNavItem}>
-                <Link to="./PageScience">Science</Link>
+                <Link className={style.routerNavItemLink} to="./PageScience">Science</Link>
               </li>
               <li className={style.routerNavItem}>
-                <Link to="./PageSport">Sport</Link>
+                <Link className={style.routerNavItemLink} to="./PageSport">Sport</Link>
               </li>
               <li className={style.routerNavItem}>
-                <Link to="./PageHealth">Health</Link>
+                <Link className={style.routerNavItemLink} to="./PageHealth">Health</Link>
               </li>
               <li className={style.routerNavItem}>
-                <Link to="./PageTechnology">Technology</Link>
+                <Link className={style.routerNavItemLink} to="./PageTechnology">Technology</Link>
               </li>
             </ul>
             <div className={style.weatherAndDate}>
-              <UserDate />
-              <Weather />
+              <Weather  />
+              <UserDate  />
             </div>
           </div>
         </div>

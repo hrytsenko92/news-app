@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from "./main.module.css";
 
 const Weather = () => {
   const [currentTemperature, setCurrentTemperature] = useState("loading...");
@@ -27,15 +28,11 @@ const Weather = () => {
   }, []);
 // className={style.weather} down
   return (
-    <div > 
-      <div className="container">
-        <div className="info">
+      <div className={style.front}>
           <div className="city">{currentCity}</div>
-          <div className="temperature">{currentTemperature}</div>
-          <div className="windSpeed">{currentWindSpeed}</div>
-        </div>
+          <div className="temperature">{Math.ceil(currentTemperature)+  " - degrees Celsius"}</div>
+          <div className="windSpeed">{currentWindSpeed + " - meters per second"}</div>
       </div>
-    </div>
   );
 };
 
