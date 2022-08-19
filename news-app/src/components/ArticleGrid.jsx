@@ -1,3 +1,4 @@
+import style from "./articleGrid.module.css";
 const ArticleGrid = (props) => {
   const { articles } = props;
   const { loading } = props;
@@ -6,18 +7,18 @@ const ArticleGrid = (props) => {
     return <h2>Loading...</h2>;
   } else
     return (
-      <div className="articleGrid">
+      <div className={style.articleGrid}>
           {articles.map((articles) => (
-            <div className="itemWrapper" key={articles.publishedAt}>
-              <div className="imageWrap">
-              <img src={articles.urlToImage} alt="articleImg" className="itemImg" />
-              <span className="itemTitle">{articles.title}</span>
+            <div className={style.itemWrapper} key={articles.publishedAt}>
+              <div className={style.imageWrap}>
+                <img className={style.itemImg} src={articles.urlToImage} alt="articleImg"  />
+                <div className={style.itemTitle}>{articles.title}</div>
               </div>
-              <div className="contentWrap">
-                <span className="ItemDescription">{articles.description}</span>
-                <div className="hrLine"></div>
-                <div className="btnWrap">
-                  <a href={articles.url} target="_blank" className="btnItem">Read More</a>
+              <div className={style.contentWrap}>
+                <div className={style.ItemDescription}>{articles.description}</div>
+                <div className={style.hrLine}></div>
+                <div className={style.btnWrap}>
+                  <a href={articles.url} target="_blank" className={style.btnItem}>Read More</a>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ const PageSport = () => {
   console.log(articles);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlePage] = useState(5);
+  const [articlePage] = useState(7);
   const lastArticleIndex = currentPage * articlePage;
   const firstArticleIndex = lastArticleIndex - articlePage;
   const currentArticle = articles.slice(firstArticleIndex, lastArticleIndex);
