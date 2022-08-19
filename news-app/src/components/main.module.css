@@ -188,5 +188,11 @@
   font-size: 19px;
   font-weight: 700;
   margin: 15px;
-  background-color: var(--artcl-nav);
+  background-color: var(--logo-bg);
+  color: var(--logo-text);
+}
+.pageLink:hover {
+  cursor: pointer;
+  background-color: var(--logo-bg-hover);
+
 }
