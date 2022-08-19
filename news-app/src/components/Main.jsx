@@ -12,6 +12,7 @@ import PageTechnology from "./PageTechnology";
 import style from "./main.module.css";
 import UserDate from "./UserDate";
 import Weather from "./Weather";
+import PageTopHeadlines from "./PageTopHeadlines"
 
 const Main = () => {
   return (
@@ -20,7 +21,7 @@ const Main = () => {
         <div className={style.header}>
           <div className={style.headerWrapper}>
             <div className={style.logoItem}>
-              <span className={style.logoText}>News</span>
+              <Link className={style.logoText} to="./PageTopHeadlines">News</Link>
             </div>
             <ul className={style.routerNav}>
               <li className={style.routerNavItem}>
@@ -37,13 +38,14 @@ const Main = () => {
               </li>
             </ul>
             <div className={style.weatherAndDate}>
-              <Weather  />
               <UserDate  />
+              <Weather  />
             </div>
           </div>
         </div>
         <Routes>
-          <Route path="/" element={<Navigate replace to="/PageScience" />} />
+          <Route path="/" element={<Navigate replace to="/PageTopHeadlines" />} />
+          <Route path="/PageTopHeadlines" element={<PageTopHeadlines />} />
           <Route path="/PageScience" element={<PageScience />} />
           <Route path="/PageSport" element={<PageSports />} />
           <Route path="/PageHealth" element={<PageHealth />} />

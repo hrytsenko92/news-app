@@ -26,12 +26,11 @@ const Weather = () => {
   useEffect(() => {
     getUserWeather();
   }, []);
-// className={style.weather} down
   return (
-      <div className={style.front}>
+      <div className={style.back}>
           <div className="city">{currentCity}</div>
-          <div className="temperature">{Math.ceil(currentTemperature)+  " - degrees Celsius"}</div>
-          <div className="windSpeed">{currentWindSpeed + " - meters per second"}</div>
+          <div className="temperature">{"Temperature:  " + Math.ceil(currentTemperature)+  " °C"}</div>
+          <div className="windSpeed">{"Wind Speed:  " + currentWindSpeed + " m/s"}</div>
       </div>
   );
 };
