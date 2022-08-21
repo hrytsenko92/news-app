@@ -9,7 +9,7 @@ const Pagination = (props) => {
     pageNumbers.push(i);
   }
   return (
-    <div>
+    <div className={style.paginationWrap}>
       <ul className={style.pagination}>
         {pageNumbers.map((number) => (
           <li className={style.pageItem} key={number}>

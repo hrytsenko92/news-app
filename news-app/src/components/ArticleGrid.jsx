@@ -8,21 +8,31 @@ const ArticleGrid = (props) => {
   } else
     return (
       <div className={style.articleGrid}>
-          {articles.map((articles) => (
-            <div className={style.itemWrapper} key={articles.publishedAt}>
-              <div className={style.imageWrap}>
-                <img className={style.itemImg} src={articles.urlToImage} alt="articleImg"  />
-                <div className={style.itemTitle}>{articles.title}</div>
-              </div>
-              <div className={style.contentWrap}>
-                <div className={style.ItemDescription}>{articles.description}</div>
-                <div className={style.hrLine}></div>
-                <div className={style.btnWrap}>
-                  <a href={articles.url} target="_blank" className={style.btnItem}>Read More</a>
-                </div>
+        {articles.map((articles) => (
+          <div className={style.itemWrapper} key={articles.publishedAt}>
+            <div className={style.imageWrap}>
+              <img
+                className={style.itemImg}
+                src={articles.urlToImage}
+                alt="articleImg"
+              />
+              <div className={style.itemTitle}>{articles.title}</div>
+            </div>
+            <div className={style.contentWrap}>
+              <p className={style.ItemDescription}>{articles.description}</p>
+              <div className={style.hrLine}></div>
+              <div className={style.btnWrap}>
+                <a
+                  href={articles.url}
+                  target="_blank"
+                  className={style.btnItem}
+                >
+                  Read More
+                </a>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     );
 };

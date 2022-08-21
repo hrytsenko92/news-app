@@ -33,7 +33,6 @@ const PageTechnology = () => {
         totalArticles={articles.length}
         paginate={paginate}
       />
-
     </div>
   );
 };
