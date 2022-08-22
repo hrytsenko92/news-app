@@ -18,7 +18,7 @@ const PageHealth = () => {
     const getArticles = async () => {
       setLoading(true);
       const res = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&category=health&pageSize=80&apiKey=782a7379df92415ebe4dc42d9983fc99`
+        `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&category=health&pageSize=80&apiKey=782a7379df92415ebe4dc42d9983fc99`
       );
       setArticles(res.data.articles);
       setLoading(false);
